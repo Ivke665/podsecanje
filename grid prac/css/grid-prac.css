@@ -1,0 +1,93 @@
+:root {
+  --c-n: #000080; /*navy*/
+  --c-t: #008080; /*teal*/
+  --c-dsg: #2f4f4f; /*dark slate gray*/
+  --c-rb: #4169e1; /*royal blue*/
+  --c-g: #808080; /*grey*/
+  --c-si: #a0522d; /*sienna*/
+  --c-gw: #f8f8ff; /*ghoust white*/
+  --c-w: #ffffff; /*white*/
+  --c-b: #000000; /*black*/
+  --bs-g: 1px 1px 1px 1px grey; /*box-shadow*/
+}
+
+
+.container {
+  display: grid;
+  grid-gap: 1vh;
+}
+/*---------------------header---------------------------*/
+header {
+  grid-column: 1 / 6;
+  box-shadow: var(--bs-g);
+  height: 5rem;
+}
+header img {
+  max-width: 6.5rem;
+  float: right;
+}
+header h2 {
+  text-align: center;
+}
+#icon  {
+  font-size: 4vh;
+  float: left;
+  margin-top: 15px;
+}
+/*------------------media for header------------------*/
+@media screen and (min-width: 900px) {
+  header {
+    min-width: 100%;
+  }
+}
+/*------------------main---------------------------*/
+main {
+  grid-area: 2 / span 4;
+  background: var(--c-si);
+  height: 25rem;
+  text-align: center;
+}
+main h3 {
+  font-size: 2rem;
+}
+main p {
+  font-size: 1.2rem;
+}
+.button {
+  background: var(--c-rb);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px 25px;
+}
+.button:hover {
+  background: var(--c-gw);
+}
+/*-----------------section--------------------*/
+section {
+  grid-column: 5;
+  grid-row: span 2;
+  background: var(--c-n);
+  color: var(--c-gw);
+}
+/*------------------------d-1 i d-2-------------*/
+.d-1 {
+  grid-area: 3 / span 2;
+  background: var(--c-t);
+  height: 15rem;
+}
+
+.d-2 {
+  grid-area: 3 / span 2;
+  background: var(--c-dsg);
+  height: 15rem;
+}
+/*----------------footer--------------------*/
+footer {
+  grid-area: 4 / span 5;
+  box-shadow: var(--bs-g);
+  height: 8rem;
+}
